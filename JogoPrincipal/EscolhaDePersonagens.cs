@@ -39,13 +39,13 @@ namespace JogoTermoHeros
             {
                 picPersonagens.Image = imageList1.Images[contPersonagem];
             }
-         /* else if (contPersonagem == 2)
+            else if (contPersonagem == 2)
             {
                 picPersonagens.Image = imageList1.Images[contPersonagem];
-            }*/
-            else 
+            }
+            else
             {
-                contPersonagem = 1;
+                contPersonagem = 0;
                 picPersonagens.Image = imageList1.Images[contPersonagem];
             }
         }
@@ -61,13 +61,13 @@ namespace JogoTermoHeros
             {
                 picPersonagens.Image = imageList1.Images[contPersonagem];
             }
-            /*else if (contPersonagem == 2)
+            else if (contPersonagem == 2)
             {
                 picPersonagens.Image = imageList1.Images[contPersonagem];
-            }*/
+            }
             else
             {
-                contPersonagem = 1;
+                contPersonagem = 2;
                 picPersonagens.Image = imageList1.Images[contPersonagem];
             }
         }
@@ -77,11 +77,34 @@ namespace JogoTermoHeros
             jogoPrincipal screen = new jogoPrincipal();
             this.Hide();
             screen.ShowDialog();
+            DadosCompartilhados.Personagem = contPersonagem;
         }
 
-        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        #region Configurações
+        private void tsFacil_Click(object sender, EventArgs e)
         {
-
+            DadosCompartilhados.Dificuldade = 4;
         }
+
+        private void tsMedio_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Dificuldade = 6;
+        }
+
+        private void tsDificil_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Dificuldade = 10;
+        }
+
+        private void tsSomLigado_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.somLigado();
+        }
+
+        private void tsSomDesligado_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.somDesligado();
+        }
+        #endregion
     }
 }

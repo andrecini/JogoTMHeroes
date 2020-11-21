@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(jogoPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.picPersonagem = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPersonagem)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +60,7 @@
             this.panel1.Size = new System.Drawing.Size(47, 460);
             this.panel1.TabIndex = 0;
             // 
-            // bTNpLAY
+            // btnPlay
             // 
             this.btnPlay.BackColor = System.Drawing.Color.Transparent;
             this.btnPlay.BackgroundImage = global::JogoTermoHeros.Properties.Resources.PLAY;
@@ -66,7 +68,7 @@
             this.btnPlay.Image = global::JogoTermoHeros.Properties.Resources.PLAY;
             this.btnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPlay.Location = new System.Drawing.Point(-1, -2);
-            this.btnPlay.Name = "bTNpLAY";
+            this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(46, 42);
             this.btnPlay.TabIndex = 1;
             this.btnPlay.UseVisualStyleBackColor = false;
@@ -147,7 +149,6 @@
             // picPersonagem
             // 
             this.picPersonagem.BackColor = System.Drawing.Color.Transparent;
-            this.picPersonagem.Image = global::JogoTermoHeros.Properties.Resources.wuoLado;
             this.picPersonagem.Location = new System.Drawing.Point(125, 210);
             this.picPersonagem.Name = "picPersonagem";
             this.picPersonagem.Size = new System.Drawing.Size(60, 60);
@@ -172,6 +173,14 @@
             // 
             this.timer.Interval = 20;
             this.timer.Tick += new System.EventHandler(this.GameTimer);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "viottiLado.png");
+            this.imageList1.Images.SetKeyName(1, "wuoLado.png");
+            this.imageList1.Images.SetKeyName(2, "1605942301523.png");
             // 
             // jogoPrincipal
             // 
@@ -208,5 +217,6 @@
         private System.Windows.Forms.PictureBox picPersonagem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

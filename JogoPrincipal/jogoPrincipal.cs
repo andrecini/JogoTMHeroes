@@ -3,34 +3,28 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
+
 namespace JogoTermoHeros.JogoPrincipal
 {
     public partial class jogoPrincipal : Form
     {
-        #region variáveis 
-        //variáveis de movimentação
-        public bool cima;
-        public bool up;
-        //variáveis de velocidade       
-        public int aceleracao = 3;
-        public int velocidade;
-        public int v = DadosCompartilhados.Dificuldade;
-        //variáveis de contagem
-        public int contador = 200;
-        public int contador2 = 0;
-        public int contador3 = 0;
-        //variável de pontuação
-        public int score = -10;
-        //variável para gerar obstaculos
-        private string[] conteudo;
-        int quant = 0;
-        private PictureBox[] obstaculo = new PictureBox[100];
-        string[] caracteristicas;
-        #endregion
 
         public jogoPrincipal()
         {
             InitializeComponent();
+            
+            if(DadosCompartilhados.Personagem == 0)
+            {
+                picPersonagem.Image = imageList1.Images[0];
+            }
+            else if (DadosCompartilhados.Personagem == 1)
+            {
+                picPersonagem.Image = imageList1.Images[1];
+            }
+            else if (DadosCompartilhados.Personagem == 2)
+            {
+                picPersonagem.Image = imageList1.Images[2];
+            }
         }
 
         /// <summary>
@@ -68,6 +62,53 @@ namespace JogoTermoHeros.JogoPrincipal
 
         }
 
+        /// <summary>
+        /// Soma a pontuação do usuário
+        /// </summary>
+        public void Pontuacao()
+        {
+            score += 10;
+            label3.Text = $"Score: {score}";
+            DadosCompartilhados.score = score;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            conteudo = File.ReadAllLines("obstaculos.txt");
+        }
+
+        public void AbreTelaRecord()
+        {
+            telaAdd screen = new telaAdd();
+            screen.ShowDialog();
+        }
+
+        private void jogoPrincipal_Load(object sender, EventArgs e)
+        {
+            conteudo = File.ReadAllLines("obstaculos.txt");
+        }
+
+        #region variáveis 
+        //variáveis de movimentação
+        public bool cima;
+        public bool up;
+        //variáveis de velocidade       
+        public int aceleracao = 3;
+        public int velocidade;
+        public int v = DadosCompartilhados.Dificuldade;
+        //variáveis de contagem
+        public int contador = 200;
+        public int contador2 = 0;
+        public int contador3 = 0;
+        //variável de pontuação
+        public int score = -10;
+        //variável para gerar obstaculos
+        private string[] conteudo;
+        int quant = 0;
+        private PictureBox[] obstaculo = new PictureBox[100];
+        string[] caracteristicas;
+
+        #endregion
 
         #region Métodos Personagens
         /// <summary>
@@ -209,7 +250,7 @@ namespace JogoTermoHeros.JogoPrincipal
                     if ((picPersonagem.Bounds).IntersectsWith(((PictureBox)x).Bounds))
                     {
                         timer.Stop();
-                        AbreForms();
+                        AbreTelaRecord();
                     }
                 }
                 else if (x is PictureBox && x.Tag.ToString() == "moeda")
@@ -286,34 +327,12 @@ namespace JogoTermoHeros.JogoPrincipal
 
         #endregion
 
-        public void Pontuacao()
-        {
-            score += 10;
-            label3.Text = $"Score: {score}";
-            DadosCompartilhados.score = score;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            conteudo = File.ReadAllLines("obstaculos.txt");
-        }
-
+        #region Botões Barra Menu
         private void btnPlay_Click(object sender, EventArgs e)
         {
             timer.Enabled = true;
             timer.Start();
             this.ActiveControl = null;
-        }
-
-        public void AbreForms()
-        {
-            telaAdd screen = new telaAdd();
-            screen.ShowDialog();
-        }
-
-        private void jogoPrincipal_Load(object sender, EventArgs e)
-        {
-            conteudo = File.ReadAllLines("obstaculos.txt");
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -328,5 +347,6 @@ namespace JogoTermoHeros.JogoPrincipal
             this.Hide();
             screen.Show();
         }
+        #endregion
     }
 }

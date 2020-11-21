@@ -69,12 +69,12 @@ namespace JogoTermoHeros
 
         private void tsSomLigado_Click(object sender, EventArgs e)
         {
-            DadosCompartilhados.Som = true;
+            DadosCompartilhados.somLigado();
         }
 
         private void tsSomDesligado_Click(object sender, EventArgs e)
         {
-            DadosCompartilhados.Som = false;
+            DadosCompartilhados.somDesligado();
         }
         #endregion
     }

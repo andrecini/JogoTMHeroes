@@ -31,7 +31,7 @@ namespace JogoTermoHeros
             }
 
             record.Sort();
-            for (int x = Lines.Length - 1; x >= 0; x--)
+            for (int x = Lines.Length - 2; x >= 0; x--)
             {
                 Scores.Items.Add(record[x]);
             }

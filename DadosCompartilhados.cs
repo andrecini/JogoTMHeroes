@@ -13,7 +13,7 @@ namespace JogoTermoHeros
 
 
         public static int score;
-        public static int Dificuldade;
+        public static int Dificuldade = 6;
         public static bool Som;
         public static void somLigado()
         {           
@@ -24,5 +24,6 @@ namespace JogoTermoHeros
         {
             som.Stop();
         }
+        public static int Personagem;
     }
 }

@@ -53,10 +53,10 @@
     <Compile Include="JogoPrincipal\jogoPrincipal.Designer.cs">
       <DependentUpon>jogoPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="telaAdd.cs">
+    <Compile Include="JogoPrincipal\telaAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaAdd.Designer.cs">
+    <Compile Include="JogoPrincipal\telaAdd.Designer.cs">
       <DependentUpon>telaAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="TelasIniciais\Form1.cs">
@@ -85,28 +85,28 @@
     <Compile Include="MiniGames\TelaBrMagic.Designer.cs">
       <DependentUpon>TelaBrMagic.cs</DependentUpon>
     </Compile>
-    <Compile Include="MiniGames\JogoWuo\TelaJogoIdade2.cs">
+    <Compile Include="MiniGames\TelaJogoIdade2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MiniGames\JogoWuo\TelaJogoIdade2.Designer.cs">
+    <Compile Include="MiniGames\TelaJogoIdade2.Designer.cs">
       <DependentUpon>TelaJogoIdade2.cs</DependentUpon>
     </Compile>
-    <Compile Include="MiniGames\JogoWuo\TelaJogoIdadeUm.cs">
+    <Compile Include="MiniGames\TelaJogoIdadeUm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MiniGames\JogoWuo\TelaJogoIdadeUm.Designer.cs">
+    <Compile Include="MiniGames\TelaJogoIdadeUm.Designer.cs">
       <DependentUpon>TelaJogoIdadeUm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MiniGames\JogoViotti\TelaMa%28th%29gicViotti.cs">
+    <Compile Include="MiniGames\TelaMa%28th%29gicViotti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MiniGames\JogoViotti\TelaMa%28th%29gicViotti.Designer.cs">
+    <Compile Include="MiniGames\TelaMa%28th%29gicViotti.Designer.cs">
       <DependentUpon>TelaMa%28th%29gicViotti.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="JogoPrincipal\jogoPrincipal.resx">
       <DependentUpon>jogoPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="telaAdd.resx">
+    <EmbeddedResource Include="JogoPrincipal\telaAdd.resx">
       <DependentUpon>telaAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelasIniciais\Form1.resx">
@@ -131,13 +131,13 @@
     <EmbeddedResource Include="MiniGames\TelaBrMagic.resx">
       <DependentUpon>TelaBrMagic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiniGames\JogoWuo\TelaJogoIdade2.resx">
+    <EmbeddedResource Include="MiniGames\TelaJogoIdade2.resx">
       <DependentUpon>TelaJogoIdade2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiniGames\JogoWuo\TelaJogoIdadeUm.resx">
+    <EmbeddedResource Include="MiniGames\TelaJogoIdadeUm.resx">
       <DependentUpon>TelaJogoIdadeUm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiniGames\JogoViotti\TelaMa%28th%29gicViotti.resx">
+    <EmbeddedResource Include="MiniGames\TelaMa%28th%29gicViotti.resx">
       <DependentUpon>TelaMa%28th%29gicViotti.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -231,9 +231,7 @@
   <ItemGroup>
     <None Include="Resources\viottiFrente.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MiniGames\JogoBrMagic2020\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\temaJogoPrincipal.png" />
   </ItemGroup>
