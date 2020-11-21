@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace JogoTermoHeros
 {
@@ -15,6 +16,7 @@ namespace JogoTermoHeros
         public Form1()
         {
             InitializeComponent();
+            DadosCompartilhados.somLigado();
         }
 
         private void iniciar_click(object sender, EventArgs e)
@@ -28,5 +30,32 @@ namespace JogoTermoHeros
         {
             pictureBox2.Parent = pictureBox1;
         }
+
+        #region Configurações
+        private void tsFacil_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Dificuldade = 4;
+        }
+
+        private void tsMedio_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Dificuldade = 6;
+        }
+
+        private void tsDificil_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Dificuldade = 10;
+        }
+
+        private void tsSomLigado_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.somLigado();
+        }
+
+        private void tsSomDesligado_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.somDesligado();
+        }
+        #endregion
     }
 }

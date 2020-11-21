@@ -48,5 +48,34 @@ namespace JogoTermoHeros
             TelaMa_th_gicViotti screen = new TelaMa_th_gicViotti();
             screen.ShowDialog();
         }
+
+
+
+        #region Configurações
+        private void tsFacil_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Dificuldade = 4;
+        }
+
+        private void tsMedio_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Dificuldade = 6;
+        }
+
+        private void tsDificil_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Dificuldade = 10;
+        }
+
+        private void tsSomLigado_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Som = true;
+        }
+
+        private void tsSomDesligado_Click(object sender, EventArgs e)
+        {
+            DadosCompartilhados.Som = false;
+        }
+        #endregion
     }
 }

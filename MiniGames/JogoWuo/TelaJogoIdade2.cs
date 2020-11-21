@@ -184,5 +184,10 @@ namespace JogoTermoHeros
             OpcoesDeGame telaOpcoes = new OpcoesDeGame();
             telaOpcoes.Show();
         }
+
+        private void tsSomLigado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
